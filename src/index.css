@@ -22,3 +22,18 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.btn {
+  background-color: #eed6cf;
+  color: #1E1E1E;
+  padding: 16px 10px;
+  border: none;
+  width: 348px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  margin: auto;
+
+}
