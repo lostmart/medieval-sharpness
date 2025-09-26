@@ -1,36 +1,25 @@
 import styles from "./App.module.scss"
 
+import bg from "./assets/bg.png"
+import lake from "./assets/02.png"
+import house from "./assets/04.png"
+import nearMountains from "./assets/05.png"
+import tree from "./assets/06.png"
+
 const App = () => {
 	return (
-		<main>
-			<ul className={styles.scene}>
-				<li className={styles.sky}></li>
-				<li className={styles.layer}>
-					<div className={styles.mountain}></div>
-				</li>
-				<li className={styles.layer}>
-					<div className={styles.moon}></div>
-				</li>
+		<main className={styles.scene}>
+			<img className={styles.bg} src={bg} alt="background" />
+			<div className={styles.moon}></div>
+			<img className={styles.lake} src={lake} alt="lake" />
 
-				<li className={styles.layer}>
-					<div className={styles.lake}></div>
-				</li>
-				<li className={styles.layer}>
-					<div className={styles.house}></div>
-				</li>
-				<li className={styles.layer}>
-					<div className={styles.islands}></div>
-				</li>
-				<li className={styles.layer}>
-					<div className={styles.frontMountains}></div>
-				</li>
-				<li className={styles.layer}>
-					<div className={styles.tree}></div>
-				</li>
-				<li className={styles.layer}>
-					<button className="btn">Make a reservation</button>
-				</li>
-			</ul>
+			<img className={styles.house} src={house} alt="islands" />
+			<img
+				className={styles.nearMountains}
+				src={nearMountains}
+				alt="mountains"
+			/>
+			<img className={styles.tree} src={tree} alt="near tree" />
 		</main>
 	)
 }

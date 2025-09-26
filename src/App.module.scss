@@ -2,91 +2,62 @@ $primary-color: #9fb9b5;
 $secondary-color: #eed6cf;
 
 .scene {
-	position: relative;
-	.sky {
-		min-height: 80vh;
-		background-color: $primary-color;
-		width: 100%;
-	}
+	background-color: $primary-color;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 
-	.layer {
+	.bg {
 		position: absolute;
-		inset: 0;
+		z-index: 0;
+		width: 100%;
+		top: calc(34% - 60px);
 	}
 
 	.moon {
 		width: 110px;
 		height: 110px;
-		border-radius: 100%;
-		background-color: white;
+		background-color: #fff;
+		border-radius: 50%;
 		position: absolute;
-		display: block;
-		right: 0;
-		top: 20%;
-		transform: translate3d(0, 0, 0);
-		transform-style: preserve-3d;
-		backface-visibility: hidden;
-	}
-
-	.mountain {
-		background: url("./assets/bg.png") no-repeat center 50% / contain;
-		width: 100%;
-		height: 100%;
-		transform: translate3d(0, 0, 0);
-		transform-style: preserve-3d;
-		backface-visibility: hidden;
 	}
 
 	.lake {
-		background: url("./assets/02.png") no-repeat center 50% / contain;
-		background-position: 0 74%;
-		width: 100%;
-		height: 100%;
-		transform: translate3d(0, 0, 0);
-		transform-style: preserve-3d;
-		backface-visibility: hidden;
-	}
-
-	.house {
-		background: url("./assets/04.png") no-repeat center 50% / contain;
-		background-position: -80px 47%;
-		width: 100%;
-		height: 100%;
-		max-width: 280px;
-		transform: translate3d(0, 0, 0);
-		transform-style: preserve-3d;
-		backface-visibility: hidden;
+		position: absolute;
+		top: calc(50% - 60px);
 	}
 
 	.islands {
-		background: url("./assets/03.png") no-repeat center 50% / contain;
-		max-width: 180px;
-		width: 100%;
-		height: 100%;
 		position: absolute;
-		transform: translate3d(0, 0, 0);
-		transform-style: preserve-3d;
-		backface-visibility: hidden;
-		right: 0;
-		top: 20.66%;
+		top: calc(50% - 60px);
+		z-index: 1;
 	}
 
-	.frontMountains {
-		background: url("./assets/05.png") no-repeat center 50% / contain;
-		background-position: -7px 165px;
-		width: 103%;
-		height: 100%;
-		transform: translate3d(0, 0, 0);
-		transform-style: preserve-3d;
-		backface-visibility: hidden;
+	.house {
+		position: absolute;
+		top: calc(30% - 60px);
+		left: -51px;
+		z-index: 1;
 	}
 
-	.tree{
-		background: url("./assets/06.png") no-repeat center 50% / contain;
-		width: 100%;
-		height: 100%;
-		transform: translate3d(0, 0, 0);
-		transform-style: preserve-3d;
-		backface-visibility: hidden;
+	.mountains {
+		position: absolute;
+		top: calc(50% - 60px);
+		z-index: 1;
+	}
+
+	.nearMountains {
+		position: absolute;
+		top: calc(50% - 60px);
+		z-index: 1;
+	}
+
+	.tree {
+		position: absolute;
+		top: -55px;
+		z-index: 1;
+		left: -68px;
 	}
 }
