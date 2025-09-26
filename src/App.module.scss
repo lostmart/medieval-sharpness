@@ -8,31 +8,43 @@ $secondary-color: #eed6cf;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	position: relative;
+	overflow: hidden;
 
 	.bg {
 		position: absolute;
 		z-index: 0;
 		width: 100%;
-		top: calc(34% - 60px);
+		top: calc(33% - 60px);
+		left: 0; // Add this
+		transform-style: preserve-3d;
 	}
 
 	.moon {
-		width: 110px;
-		height: 110px;
+		width: max(90px, 12vw);
+		height: max(90px, 12vw);
 		background-color: #fff;
 		border-radius: 50%;
 		position: absolute;
+		top: 13%;
+		right: 3%;
+		z-index: 0;
+		transform-style: preserve-3d;
 	}
 
 	.lake {
 		position: absolute;
+		width: 100%;
 		top: calc(50% - 60px);
+		transform-style: preserve-3d;
+		left: 0;
 	}
 
 	.islands {
 		position: absolute;
 		top: calc(50% - 60px);
 		z-index: 1;
+		transform-style: preserve-3d;
 	}
 
 	.house {
@@ -40,18 +52,23 @@ $secondary-color: #eed6cf;
 		top: calc(30% - 60px);
 		left: -51px;
 		z-index: 1;
+		transform-style: preserve-3d;
 	}
 
 	.mountains {
 		position: absolute;
+		width: 100%;
 		top: calc(50% - 60px);
 		z-index: 1;
+		transform-style: preserve-3d;
 	}
 
 	.nearMountains {
 		position: absolute;
-		top: calc(50% - 60px);
+		top: calc(27% - 60px);
 		z-index: 1;
+		width: 106%;
+		transform-style: preserve-3d;
 	}
 
 	.tree {
@@ -59,5 +76,6 @@ $secondary-color: #eed6cf;
 		top: -55px;
 		z-index: 1;
 		left: -68px;
+		transform-style: preserve-3d;
 	}
 }
