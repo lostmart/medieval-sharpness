@@ -1,0 +1,7 @@
+@use "../sass/variables" as *;
+@use "../sass/mixins" as *;
+
+.about {
+	background-color: $tertiary-color;
+	min-height: 50dvh;
+}

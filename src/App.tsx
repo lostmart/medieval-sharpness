@@ -7,6 +7,7 @@ import nearMountains from "./assets/05.png"
 import tree from "./assets/06.png"
 
 import { useEffect, useState } from "react"
+import AboutComp from "./components/AboutComp"
 
 const App = () => {
 	const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
@@ -43,76 +44,79 @@ const App = () => {
 	}
 
 	return (
-		<main
-			className={styles.scene}
-			style={{
-				transformStyle: "preserve-3d",
-			}}
-		>
-			<div
-				className={styles.moon}
+		<main>
+			<section
+				className={styles.scene}
 				style={{
-					transform: `translate3d(${mousePosition.x * 0.005}px, ${
-						mousePosition.y * 0.005
-					}px, 0px)`,
-					...springStyle,
+					transformStyle: "preserve-3d",
 				}}
-			></div>
-			<img
-				className={styles.bg}
-				src={bg}
-				alt="background"
-				style={{
-					transform: `translate3d(${mousePosition.x * 0.01}px, ${
-						mousePosition.y * 0.01
-					}px, 0px)`,
-					...springStyle,
-				}}
-			/>
-			<img
-				className={styles.lake}
-				src={lake}
-				alt="lake"
-				style={{
-					transform: `translate3d(${mousePosition.x * 0.03}px, ${
-						mousePosition.y * 0.03
-					}px, 0px)`,
-					...springStyle,
-				}}
-			/>
-			<img
-				className={styles.house}
-				src={house}
-				alt="islands"
-				style={{
-					transform: `translate3d(${mousePosition.x * 0.03}px, ${
-						mousePosition.y * 0.03
-					}px, 0px)`,
-					...springStyle,
-				}}
-			/>
-			<img
-				className={styles.nearMountains}
-				src={nearMountains}
-				alt="mountains"
-				style={{
-					transform: `translate3d(${mousePosition.x * 0.08}px, ${
-						mousePosition.y * 0.08
-					}px, 0px)`,
-					...strongSpringStyle,
-				}}
-			/>
-			<img
-				className={styles.tree}
-				src={tree}
-				alt="near tree"
-				style={{
-					transform: `translate3d(${mousePosition.x * 0.1}px, ${
-						mousePosition.y * 0.1
-					}px, 0px)`,
-					...strongSpringStyle,
-				}}
-			/>
+			>
+				<div
+					className={styles.moon}
+					style={{
+						transform: `translate3d(${mousePosition.x * 0.005}px, ${
+							mousePosition.y * 0.005
+						}px, 0px)`,
+						...springStyle,
+					}}
+				></div>
+				<img
+					className={styles.bg}
+					src={bg}
+					alt="background"
+					style={{
+						transform: `translate3d(${mousePosition.x * 0.01}px, ${
+							mousePosition.y * 0.01
+						}px, 0px)`,
+						...springStyle,
+					}}
+				/>
+				<img
+					className={styles.lake}
+					src={lake}
+					alt="lake"
+					style={{
+						transform: `translate3d(${mousePosition.x * 0.03}px, ${
+							mousePosition.y * 0.03
+						}px, 0px)`,
+						...springStyle,
+					}}
+				/>
+				<img
+					className={styles.house}
+					src={house}
+					alt="islands"
+					style={{
+						transform: `translate3d(${mousePosition.x * 0.03}px, ${
+							mousePosition.y * 0.03
+						}px, 0px)`,
+						...springStyle,
+					}}
+				/>
+				<img
+					className={styles.nearMountains}
+					src={nearMountains}
+					alt="mountains"
+					style={{
+						transform: `translate3d(${mousePosition.x * 0.08}px, ${
+							mousePosition.y * 0.08
+						}px, 0px)`,
+						...strongSpringStyle,
+					}}
+				/>
+				<img
+					className={styles.tree}
+					src={tree}
+					alt="near tree"
+					style={{
+						transform: `translate3d(${mousePosition.x * 0.1}px, ${
+							mousePosition.y * 0.1
+						}px, 0px)`,
+						...strongSpringStyle,
+					}}
+				/>
+			</section>
+			<AboutComp />
 		</main>
 	)
 }

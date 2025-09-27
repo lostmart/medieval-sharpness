@@ -1,23 +1,43 @@
-$primary-color: #9fb9b5;
-$secondary-color: #eed6cf;
+@use "./sass/variables" as *;
+@use "./sass/mixins" as *;
 
 .scene {
 	background-color: $primary-color;
-	min-height: 100vh;
+	min-height: 50vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	position: relative;
 	overflow: hidden;
+	max-width: 1200px;
+	margin: auto;
 
 	.bg {
 		position: absolute;
 		z-index: 0;
 		width: 100%;
-		top: calc(33% - 60px);
-		left: 0; // Add this
+		top: calc(34% - 60px);
+		left: 0;
 		transform-style: preserve-3d;
+
+		@include mobile-small {
+			top: calc(31% - 60px);
+		}
+
+		@include mobile-medium {
+			top: calc(25% - 60px);
+		}
+
+		@include mobile-large {
+			top: calc(20% - 60px);
+			left: -1%;
+			width: 110%;
+		}
+
+		@include mobile-large-plus {
+			top: calc(17% - 60px);
+		}
 	}
 
 	.moon {
@@ -34,17 +54,30 @@ $secondary-color: #eed6cf;
 
 	.lake {
 		position: absolute;
-		width: 100%;
+		width: 110%;
 		top: calc(50% - 60px);
 		transform-style: preserve-3d;
 		left: 0;
-	}
+		right: 0;
 
-	.islands {
-		position: absolute;
-		top: calc(50% - 60px);
-		z-index: 1;
-		transform-style: preserve-3d;
+		@include mobile-small {
+			top: calc(52% - 60px);
+		}
+
+		@include mobile-medium {
+			top: calc(51% - 60px);
+			left: -2%;
+		}
+
+		@include mobile-large {
+			top: calc(47% - 60px);
+			left: -2%;
+		}
+
+		@include mobile-large-plus {
+			top: calc(55% - 60px);
+			left: -4%;
+		}
 	}
 
 	.house {
@@ -53,29 +86,47 @@ $secondary-color: #eed6cf;
 		left: -51px;
 		z-index: 1;
 		transform-style: preserve-3d;
-	}
+		max-width: 220px;
 
-	.mountains {
-		position: absolute;
-		width: 100%;
-		top: calc(50% - 60px);
-		z-index: 1;
-		transform-style: preserve-3d;
+		@include mobile-small {
+			left: 1dvw;
+			top: calc(35% - 60px);
+			max-width: 230px;
+		}
 	}
 
 	.nearMountains {
 		position: absolute;
-		top: calc(27% - 60px);
+		top: calc(30% - 60px);
 		z-index: 1;
 		width: 106%;
 		transform-style: preserve-3d;
+
+		@include mobile-small {
+			top: calc(25% - 60px);
+			width: 110%;
+		}
+
+		@include mobile-medium {
+			top: calc(15% - 60px);
+			width: 110%;
+		}
+
+		@include mobile-large {
+			top: calc(10% - 110px);
+			width: 110%;
+		}
 	}
 
 	.tree {
 		position: absolute;
-		top: -55px;
+		top: calc(10% - 110px);
 		z-index: 1;
-		left: -68px;
+		left: calc(10% - 110px);
 		transform-style: preserve-3d;
+
+		// @include mobile-small {
+		// 	left: 1dvw;
+		// }
 	}
 }
