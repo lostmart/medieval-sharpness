@@ -27,6 +27,7 @@
 		);
 		z-index: 1;
 		mix-blend-mode: multiply;
+		pointer-events: none;
 	}
 
 	.bg {
@@ -59,7 +60,7 @@
 
 	.title {
 		position: absolute;
-		z-index: 0;
+		z-index: 10;
 		top: calc(42% - 60px);
 		right: 0.5em;
 		text-align: end;
@@ -67,6 +68,7 @@
 		text-shadow: 1px 1px 1px #000;
 		font-size: 56px;
 		line-height: 1;
+		opacity: 0;
 
 		@include mobile-large-plus {
 			top: calc(44% - 60px);
@@ -83,7 +85,7 @@
 		text-shadow: 1px 1px 1px #000;
 		left: 2%;
 		transform-style: preserve-3d;
-		z-index: 0;
+		z-index: 10;
 		font-size: 1.4em;
 		padding: 1em;
 		max-width: 420px;
@@ -244,6 +246,7 @@
 
 		@include mobile-large {
 			bottom: calc(1px - 10%);
+			width: 20%;
 		}
 	}
 
@@ -258,6 +261,7 @@
 
 		@include mobile-medium {
 			right: calc(10px - 1%);
+			width: 15%;
 		}
 	}
 

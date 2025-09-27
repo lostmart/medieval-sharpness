@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Coming+Soon&family=MedievalSharp&display=swap');
+@import "./sass/animations";
 
 * {
   margin: 0;
@@ -48,22 +49,4 @@ h6 {
   cursor: pointer;
   margin: auto;
 
-}
-
-
-
-@keyframes swing {
-  0% {
-    transform: rotate(-0.4deg);
-  }
-
-  100% {
-    transform: rotate(1deg);
-  }
-}
-
-
-.swing-class {
-  animation: swing 3.6s ease-in-out infinite alternate-reverse;
-  animation-delay: 0.5s;
 }

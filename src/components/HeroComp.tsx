@@ -81,7 +81,7 @@ const HeroComp = () => {
 				}}
 			/>
 			<h1
-				className={styles.title}
+				className={`${styles.title} fadeInUp`}
 				style={{
 					transform: `translate3d(${mousePosition.x * 0.015}px, ${
 						mousePosition.y * 0.01
@@ -126,7 +126,7 @@ const HeroComp = () => {
 				}}
 			/>
 			<img
-				className={styles.nearMountainsLeft}
+				className={`${styles.nearMountainsLeft} slideFromLeft`}
 				src={nearMountainsLeft}
 				alt="mountains"
 				style={{
@@ -137,7 +137,7 @@ const HeroComp = () => {
 				}}
 			/>
 			<img
-				className={styles.nearMountainsRight}
+				className={`${styles.nearMountainsRight} slideFromRight`}
 				style={{
 					transform: `translate3d(${mousePosition.x * 0.08}px, ${
 						mousePosition.y * 0.08
