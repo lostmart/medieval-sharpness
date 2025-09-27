@@ -17,12 +17,12 @@
 		position: absolute;
 		z-index: 0;
 		width: 100%;
-		top: calc(34% - 60px);
+		top: calc(53% - 60px);
 		left: 0;
 		transform-style: preserve-3d;
 
 		@include mobile-small {
-			top: calc(31% - 60px);
+			top: calc(61% - 60px);
 		}
 
 		@include mobile-medium {
@@ -55,7 +55,7 @@
 	.lake {
 		position: absolute;
 		width: 110%;
-		top: calc(50% - 60px);
+		top: calc(85% - 60px);
 		transform-style: preserve-3d;
 		left: 0;
 		right: 0;
@@ -82,7 +82,7 @@
 
 	.house {
 		position: absolute;
-		top: calc(30% - 60px);
+		top: calc(52% - 60px);
 		left: -51px;
 		z-index: 1;
 		transform-style: preserve-3d;
@@ -97,7 +97,7 @@
 
 	.nearMountains {
 		position: absolute;
-		top: calc(30% - 60px);
+		top: calc(39% - 60px);
 		z-index: 1;
 		width: 106%;
 		transform-style: preserve-3d;

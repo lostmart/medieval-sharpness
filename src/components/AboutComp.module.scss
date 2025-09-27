@@ -4,4 +4,12 @@
 .about {
 	background-color: $tertiary-color;
 	min-height: 50dvh;
+
+	h2 {
+		text-align: center;
+		padding: 1rem;
+		font-size: 73px;
+		max-width: 356px;
+		line-height: 1;
+	}
 }
