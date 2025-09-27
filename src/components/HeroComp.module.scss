@@ -46,6 +46,7 @@
 		z-index: 0;
 		top: calc(42% - 60px);
 		left: 20%;
+		text-align: end;
 		transform-style: preserve-3d;
 		text-shadow: 1px 1px 1px #000;
 		font-size: 52px;
@@ -56,12 +57,12 @@
 		position: absolute;
 		top: calc(60% - 60px);
 		text-shadow: 1px 1px 1px #000;
-		left: 18%;
+		left: 10%;
 		transform-style: preserve-3d;
 		z-index: 0;
 		font-size: 1.2em;
 		padding: 1em;
-		max-width: 340px;
+		max-width: 420px;
 		margin: auto;
 		width: 100%;
 	}
@@ -155,41 +156,41 @@
 
 	.house {
 		position: absolute;
-		top: calc(75% - 60px);
+		bottom: calc(15% - 60px);
 		left: -28%;
 		z-index: 1;
 		transform-style: preserve-3d;
-		max-width: 240px;
+		max-width: 280px;
 
 		@include mobile-small {
 			left: -10%;
-			top: calc(58% - 60px);
-			max-width: 250px;
+			bottom: calc(15% - 60px);
+			max-width: 290px;
 		}
 
 		@include mobile-medium {
 			left: 1dvw;
-			top: calc(58% - 60px);
+			bottom: calc(15% - 60px);
 			max-width: 320px;
 		}
 
 		@include mobile-large {
 			left: 1dvw;
-			top: calc(55% - 60px);
+			bottom: calc(15% - 60px);
 			max-width: 400px;
 		}
 
 		@include mobile-large-plus {
 			left: 8dvw;
-			top: calc(44% - 60px);
+			bottom: calc(15% - 60px);
 			width: 40%;
 		}
 	}
 
 	.nearMountainsLeft {
 		position: absolute;
-		left: 0;
-		bottom: calc(1px - 60px);
+		bottom: calc(1px - 10%);
+		left: calc(1px - 5%);
 		z-index: 1;
 		transform-style: preserve-3d;
 		filter: blur(2px);
@@ -212,18 +213,19 @@
 
 	.nearMountainsRight {
 		position: absolute;
-		bottom: calc(1px - 60px);
-		right: 0;
+		bottom: calc(1px - 10%);
+		right: calc(1px - 5%);
 		z-index: 1;
 		transform-style: preserve-3d;
 		filter: blur(2px);
+		width: 110px;
 	}
 
 	.tree {
 		position: absolute;
 		top: calc(10% - 110px);
 		z-index: 1;
-		left: calc(10% - 110px);
+		left: calc(0px - 23%);
 		transform-style: preserve-3d;
 		filter: blur(3px);
 
