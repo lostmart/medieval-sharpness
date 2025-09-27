@@ -52,6 +52,15 @@ const App = () => {
 				}}
 			>
 				<div
+					className={styles.moonLight}
+					style={{
+						transform: `translate3d(${mousePosition.x * 0.005}px, ${
+							mousePosition.y * 0.003
+						}px, 0px)`,
+						...springStyle,
+					}}
+				></div>
+				<div
 					className={styles.moon}
 					style={{
 						transform: `translate3d(${mousePosition.x * 0.005}px, ${
@@ -60,6 +69,7 @@ const App = () => {
 						...springStyle,
 					}}
 				></div>
+
 				<img
 					className={styles.bg}
 					src={bg}

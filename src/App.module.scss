@@ -2,8 +2,8 @@
 @use "./sass/mixins" as *;
 
 .scene {
-	background-color: $primary-color;
-	min-height: 50vh;
+	background-color: $primary-color-alt;
+	min-height: 60vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -17,9 +17,10 @@
 		position: absolute;
 		z-index: 0;
 		width: 100%;
-		top: calc(53% - 60px);
+		top: calc(57% - 60px);
 		left: 0;
 		transform-style: preserve-3d;
+		filter: blur(1px);
 
 		@include mobile-small {
 			top: calc(61% - 60px);
@@ -47,9 +48,23 @@
 		border-radius: 50%;
 		position: absolute;
 		top: 13%;
-		right: 3%;
+		right: 5%;
 		z-index: 0;
 		transform-style: preserve-3d;
+		filter: blur(1px);
+	}
+
+	.moonLight {
+		width: max(190px, 12vw);
+		height: max(190px, 12vw);
+		background-color: #ffffff66;
+		border-radius: 50%;
+		position: absolute;
+		top: 0%;
+		right: -5%;
+		z-index: 0;
+		transform-style: preserve-3d;
+		filter: blur(42px);
 	}
 
 	.lake {
@@ -83,7 +98,7 @@
 	.house {
 		position: absolute;
 		top: calc(52% - 60px);
-		left: -51px;
+		left: -10%;
 		z-index: 1;
 		transform-style: preserve-3d;
 		max-width: 220px;
@@ -97,10 +112,11 @@
 
 	.nearMountains {
 		position: absolute;
-		top: calc(39% - 60px);
+		top: calc(49% - 60px);
 		z-index: 1;
 		width: 106%;
 		transform-style: preserve-3d;
+		filter: blur(2px);
 
 		@include mobile-small {
 			top: calc(25% - 60px);
@@ -124,6 +140,7 @@
 		z-index: 1;
 		left: calc(10% - 110px);
 		transform-style: preserve-3d;
+		filter: blur(3px);
 
 		// @include mobile-small {
 		// 	left: 1dvw;
