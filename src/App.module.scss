@@ -13,12 +13,28 @@
 	max-width: 1200px;
 	margin: auto;
 
+	@include mobile-small {
+		min-height: 70vh;
+	}
+
+	@include mobile-medium {
+		min-height: 80vh;
+	}
+
+	@include mobile-large {
+		min-height: 85vh;
+	}
+
+	@include mobile-large-plus {
+		min-height: 95vh;
+	}
+
 	.bg {
 		position: absolute;
 		z-index: 0;
-		width: 100%;
-		top: calc(62% - 60px);
-		left: 0;
+		width: 105%;
+		top: calc(65% - 60px);
+		left: -3%;
 		transform-style: preserve-3d;
 		filter: blur(1px);
 
@@ -27,7 +43,7 @@
 		}
 
 		@include mobile-medium {
-			top: calc(25% - 60px);
+			top: calc(36% - 60px);
 		}
 
 		@include mobile-large {
@@ -47,7 +63,7 @@
 		background-color: #fff;
 		border-radius: 50%;
 		position: absolute;
-		top: 15%;
+		top: 16%;
 		right: 5%;
 		z-index: 0;
 		transform-style: preserve-3d;
@@ -57,6 +73,11 @@
 			top: 24%;
 			right: 7%;
 		}
+
+		@include mobile-medium {
+			top: 20%;
+			right: 10%;
+		}
 	}
 
 	.moonLight {
@@ -65,7 +86,7 @@
 		background-color: #ffffff66;
 		border-radius: 50%;
 		position: absolute;
-		top: 2%;
+		top: 3%;
 		right: -5%;
 		z-index: 0;
 		transform-style: preserve-3d;
@@ -75,12 +96,16 @@
 			top: 4%;
 			right: -2%;
 		}
+		@include mobile-medium {
+			top: 2%;
+			right: 0;
+		}
 	}
 
 	.lake {
 		position: absolute;
 		width: 110%;
-		top: calc(89% - 60px);
+		top: calc(91% - 60px);
 		transform-style: preserve-3d;
 		left: 0;
 		right: 0;
@@ -90,12 +115,12 @@
 		}
 
 		@include mobile-medium {
-			top: calc(51% - 60px);
+			top: calc(75% - 60px);
 			left: -2%;
 		}
 
 		@include mobile-large {
-			top: calc(47% - 60px);
+			top: calc(67% - 60px);
 			left: -2%;
 		}
 
@@ -107,7 +132,7 @@
 
 	.house {
 		position: absolute;
-		top: calc(55% - 60px);
+		top: calc(56% - 60px);
 		left: -10%;
 		z-index: 1;
 		transform-style: preserve-3d;
@@ -115,26 +140,26 @@
 
 		@include mobile-small {
 			left: 1dvw;
-			top: calc(56% - 60px);
-			max-width: 230px;
+			top: calc(50% - 60px);
+			max-width: 250px;
 		}
 	}
 
 	.nearMountains {
 		position: absolute;
-		top: calc(60% - 60px);
+		top: calc(63% - 60px);
 		z-index: 1;
 		width: 106%;
 		transform-style: preserve-3d;
 		filter: blur(2px);
 
 		@include mobile-small {
-			top: calc(50% - 60px);
+			top: calc(48% - 100px);
 			width: 110%;
 		}
 
 		@include mobile-medium {
-			top: calc(15% - 60px);
+			top: calc(30% - 60px);
 			width: 110%;
 		}
 
