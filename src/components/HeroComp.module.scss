@@ -45,22 +45,22 @@
 		position: absolute;
 		z-index: 0;
 		top: calc(42% - 60px);
-		left: 20%;
+		right: 0.5em;
 		text-align: end;
 		transform-style: preserve-3d;
 		text-shadow: 1px 1px 1px #000;
-		font-size: 52px;
+		font-size: 56px;
 		line-height: 1;
 	}
 
 	.lead {
 		position: absolute;
-		top: calc(60% - 60px);
+		top: calc(58% - 60px);
 		text-shadow: 1px 1px 1px #000;
-		left: 10%;
+		left: 2%;
 		transform-style: preserve-3d;
 		z-index: 0;
-		font-size: 1.2em;
+		font-size: 1.4em;
 		padding: 1em;
 		max-width: 420px;
 		margin: auto;
@@ -68,8 +68,8 @@
 	}
 
 	.moon {
-		width: max(90px, 12vw);
-		height: max(90px, 12vw);
+		width: max(99px, 13vw);
+		height: max(99px, 13vw);
 		background-color: #fff;
 		border-radius: 50%;
 		position: absolute;
@@ -103,8 +103,8 @@
 		background-color: #ffffff66;
 		border-radius: 50%;
 		position: absolute;
-		top: 3%;
-		right: -5%;
+		top: 8%;
+		right: 0%;
 		z-index: 0;
 		transform-style: preserve-3d;
 		filter: blur(42px);
@@ -156,7 +156,7 @@
 
 	.house {
 		position: absolute;
-		bottom: calc(15% - 60px);
+		bottom: calc(12% - 60px);
 		left: -28%;
 		z-index: 1;
 		transform-style: preserve-3d;
@@ -228,6 +228,7 @@
 		left: calc(0px - 23%);
 		transform-style: preserve-3d;
 		filter: blur(3px);
+		transform-origin: left bottom;
 
 		@include mobile-small {
 			top: calc(16% - 90px);

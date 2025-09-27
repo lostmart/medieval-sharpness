@@ -49,3 +49,21 @@ h6 {
   margin: auto;
 
 }
+
+
+
+@keyframes swing {
+  0% {
+    transform: rotate(-0.4deg);
+  }
+
+  100% {
+    transform: rotate(1deg);
+  }
+}
+
+
+.swing-class {
+  animation: swing 3.6s ease-in-out infinite alternate-reverse;
+  animation-delay: 0.5s;
+}

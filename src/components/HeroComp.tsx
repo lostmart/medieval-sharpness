@@ -148,7 +148,7 @@ const HeroComp = () => {
 				alt="right mountain"
 			/>
 			<img
-				className={styles.tree}
+				className={`${styles.tree} swing-class`}
 				src={tree}
 				alt="near tree"
 				style={{
