@@ -17,13 +17,13 @@
 		position: absolute;
 		z-index: 0;
 		width: 100%;
-		top: calc(57% - 60px);
+		top: calc(62% - 60px);
 		left: 0;
 		transform-style: preserve-3d;
 		filter: blur(1px);
 
 		@include mobile-small {
-			top: calc(61% - 60px);
+			top: calc(52% - 60px);
 		}
 
 		@include mobile-medium {
@@ -47,11 +47,16 @@
 		background-color: #fff;
 		border-radius: 50%;
 		position: absolute;
-		top: 13%;
+		top: 15%;
 		right: 5%;
 		z-index: 0;
 		transform-style: preserve-3d;
 		filter: blur(1px);
+
+		@include mobile-small {
+			top: 24%;
+			right: 7%;
+		}
 	}
 
 	.moonLight {
@@ -60,23 +65,28 @@
 		background-color: #ffffff66;
 		border-radius: 50%;
 		position: absolute;
-		top: 0%;
+		top: 2%;
 		right: -5%;
 		z-index: 0;
 		transform-style: preserve-3d;
 		filter: blur(42px);
+
+		@include mobile-small {
+			top: 4%;
+			right: -2%;
+		}
 	}
 
 	.lake {
 		position: absolute;
 		width: 110%;
-		top: calc(85% - 60px);
+		top: calc(89% - 60px);
 		transform-style: preserve-3d;
 		left: 0;
 		right: 0;
 
 		@include mobile-small {
-			top: calc(52% - 60px);
+			top: calc(83% - 60px);
 		}
 
 		@include mobile-medium {
@@ -97,7 +107,7 @@
 
 	.house {
 		position: absolute;
-		top: calc(52% - 60px);
+		top: calc(55% - 60px);
 		left: -10%;
 		z-index: 1;
 		transform-style: preserve-3d;
@@ -105,21 +115,21 @@
 
 		@include mobile-small {
 			left: 1dvw;
-			top: calc(35% - 60px);
+			top: calc(56% - 60px);
 			max-width: 230px;
 		}
 	}
 
 	.nearMountains {
 		position: absolute;
-		top: calc(49% - 60px);
+		top: calc(60% - 60px);
 		z-index: 1;
 		width: 106%;
 		transform-style: preserve-3d;
 		filter: blur(2px);
 
 		@include mobile-small {
-			top: calc(25% - 60px);
+			top: calc(50% - 60px);
 			width: 110%;
 		}
 
@@ -142,8 +152,8 @@
 		transform-style: preserve-3d;
 		filter: blur(3px);
 
-		// @include mobile-small {
-		// 	left: 1dvw;
-		// }
+		@include mobile-small {
+			top: calc(14% - 110px);
+		}
 	}
 }
