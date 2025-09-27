@@ -81,6 +81,29 @@ const App = () => {
 						...springStyle,
 					}}
 				/>
+				<h1
+					className={styles.title}
+					style={{
+						transform: `translate3d(${mousePosition.x * 0.015}px, ${
+							mousePosition.y * 0.01
+						}px, 0px)`,
+						...springStyle,
+					}}
+				>
+					Medieval Sharpness
+				</h1>
+				<p
+					style={{
+						transform: `translate3d(${mousePosition.x * 0.015}px, ${
+							mousePosition.y * 0.01
+						}px, 0px)`,
+						...springStyle,
+					}}
+					className={styles.lead}
+				>
+					Exploring Japan’s regional medieval heritage through blades, battles,
+					and craftsmanship.
+				</p>
 				<img
 					className={styles.lake}
 					src={lake}

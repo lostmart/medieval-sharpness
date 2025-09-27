@@ -3,7 +3,7 @@
 
 .scene {
 	background-color: $primary-color-alt;
-	min-height: 60vh;
+	min-height: 90vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -13,48 +13,61 @@
 	max-width: 1200px;
 	margin: auto;
 
-	@include mobile-small {
-		min-height: 70vh;
-	}
-
-	@include mobile-medium {
-		min-height: 80vh;
-	}
-
-	@include mobile-large {
-		min-height: 85vh;
-	}
-
 	@include mobile-large-plus {
-		min-height: 95vh;
+		min-height: 97vh;
 	}
 
 	.bg {
 		position: absolute;
 		z-index: 0;
 		width: 105%;
-		top: calc(65% - 60px);
+		top: calc(70% - 60px);
 		left: -3%;
 		transform-style: preserve-3d;
 		filter: blur(1px);
 
 		@include mobile-small {
-			top: calc(52% - 60px);
+			top: calc(56% - 60px);
 		}
 
 		@include mobile-medium {
-			top: calc(36% - 60px);
+			top: calc(49% - 60px);
 		}
 
 		@include mobile-large {
-			top: calc(20% - 60px);
+			top: calc(36% - 60px);
 			left: -1%;
 			width: 110%;
 		}
 
 		@include mobile-large-plus {
-			top: calc(17% - 60px);
+			top: calc(27% - 60px);
 		}
+	}
+
+	.title {
+		position: absolute;
+		z-index: 0;
+		top: calc(42% - 60px);
+		left: 30%;
+		transform-style: preserve-3d;
+		text-shadow: 1px 1px 1px #000;
+		font-size: 52px;
+		line-height: 1;
+	}
+
+	.lead {
+		position: absolute;
+		top: calc(60% - 60px);
+		text-shadow: 1px 1px 1px #000;
+		left: 18%;
+		transform-style: preserve-3d;
+		z-index: 0;
+		font-size: 1.2em;
+		padding: 1em;
+		max-width: 340px;
+		margin: auto;
+		width: 100%;
 	}
 
 	.moon {
@@ -78,6 +91,13 @@
 			top: 20%;
 			right: 10%;
 		}
+
+		@include mobile-large {
+			width: max(120px, 12vw);
+			height: max(120px, 12vw);
+			top: 15%;
+			right: 10%;
+		}
 	}
 
 	.moonLight {
@@ -93,12 +113,19 @@
 		filter: blur(42px);
 
 		@include mobile-small {
-			top: 4%;
+			top: 6%;
 			right: -2%;
 		}
 		@include mobile-medium {
 			top: 2%;
 			right: 0;
+		}
+
+		@include mobile-large {
+			width: max(240px, 12vw);
+			height: max(240px, 12vw);
+			top: 5%;
+			right: 5%;
 		}
 	}
 
@@ -111,60 +138,78 @@
 		right: 0;
 
 		@include mobile-small {
-			top: calc(83% - 60px);
+			top: calc(84% - 60px);
 		}
 
 		@include mobile-medium {
-			top: calc(75% - 60px);
+			top: calc(80% - 60px);
 			left: -2%;
 		}
 
 		@include mobile-large {
-			top: calc(67% - 60px);
+			top: calc(74% - 60px);
 			left: -2%;
 		}
 
 		@include mobile-large-plus {
-			top: calc(55% - 60px);
+			top: calc(70% - 60px);
 			left: -4%;
 		}
 	}
 
 	.house {
 		position: absolute;
-		top: calc(58% - 60px);
-		left: -10%;
+		top: calc(65% - 60px);
+		left: -20%;
 		z-index: 1;
 		transform-style: preserve-3d;
 		max-width: 220px;
 
 		@include mobile-small {
-			left: 1dvw;
-			top: calc(50% - 60px);
+			left: -10%;
+			top: calc(58% - 60px);
 			max-width: 250px;
+		}
+
+		@include mobile-medium {
+			left: 1dvw;
+			top: calc(58% - 60px);
+			max-width: 320px;
+		}
+
+		@include mobile-large {
+			left: 1dvw;
+			top: calc(55% - 60px);
+			max-width: 400px;
+		}
+
+		@include mobile-large-plus {
+			left: 8dvw;
+			top: calc(44% - 60px);
+			width: 40%;
 		}
 	}
 
 	.nearMountains {
 		position: absolute;
-		top: calc(63% - 60px);
+		top: calc(73% - 60px);
 		z-index: 1;
 		width: 106%;
 		transform-style: preserve-3d;
 		filter: blur(2px);
 
 		@include mobile-small {
-			top: calc(48% - 100px);
+			top: calc(54% - 60px);
 			width: 110%;
 		}
 
 		@include mobile-medium {
-			top: calc(30% - 60px);
+			top: calc(39% - 60px);
 			width: 110%;
 		}
 
 		@include mobile-large {
-			top: calc(10% - 110px);
+			top: calc(32% - 80px);
 			width: 110%;
 		}
 	}
@@ -178,7 +223,25 @@
 		filter: blur(3px);
 
 		@include mobile-small {
-			top: calc(14% - 110px);
+			top: calc(16% - 90px);
+		}
+
+		@include mobile-medium {
+			top: calc(14% - 80px);
+			left: calc(0% - 90px);
+			width: 114%;
+		}
+
+		@include mobile-large {
+			top: calc(7% - 80px);
+			left: calc(0% - 90px);
+			width: 114%;
+		}
+
+		@include mobile-large-plus {
+			top: calc(-3% - 80px);
+			left: calc(0% - 169px);
+			width: 114%;
 		}
 	}
 }
