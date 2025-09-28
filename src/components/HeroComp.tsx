@@ -2,6 +2,8 @@ import { useEffect, useState } from "react"
 
 import styles from "./HeroComp.module.scss"
 
+import { motion } from "framer-motion"
+
 import bg from "../assets/bg.png"
 import lake from "../assets/02.png"
 import house from "../assets/04.png"
@@ -80,8 +82,12 @@ const HeroComp = () => {
 					...springStyle,
 				}}
 			/>
-			<h1
-				className={`${styles.title} fadeInUp`}
+
+			<motion.h1
+				initial={{ opacity: 0, y: -90 }}
+				whileInView={{ opacity: 1, y: 0 }}
+				transition={{ duration: 1.1, delay: 0.5 }}
+				className={styles.title}
 				style={{
 					transform: `translate3d(${mousePosition.x * 0.015}px, ${
 						mousePosition.y * 0.01
@@ -90,7 +96,7 @@ const HeroComp = () => {
 				}}
 			>
 				Medieval Sharpness
-			</h1>
+			</motion.h1>
 			<p
 				style={{
 					transform: `translate3d(${mousePosition.x * 0.015}px, ${
