@@ -131,8 +131,15 @@ const HeroComp = () => {
 					...springStyle,
 				}}
 			/>
-			<img
-				className={`${styles.nearMountainsLeft} slideFromLeft`}
+			<motion.img
+				initial={{ opacity: 0, x: -100 }}
+				whileInView={{ opacity: 1, x: 0 }}
+				transition={{
+					duration: 1.5,
+					ease: "easeInOut",
+					delay: 0.2,
+				}}
+				className={`${styles.nearMountainsLeft}`}
 				src={nearMountainsLeft}
 				alt="mountains"
 				style={{
@@ -142,7 +149,14 @@ const HeroComp = () => {
 					...strongSpringStyle,
 				}}
 			/>
-			<img
+			<motion.img
+				initial={{ opacity: 0, x: 100 }}
+				whileInView={{ opacity: 1, x: 0 }}
+				transition={{
+					duration: 1.5,
+					ease: "easeInOut",
+					delay: 0.2,
+				}}
 				className={`${styles.nearMountainsRight} slideFromRight`}
 				style={{
 					transform: `translate3d(${mousePosition.x * 0.08}px, ${
