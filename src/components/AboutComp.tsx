@@ -1,9 +1,37 @@
+import { useEffect, useState } from "react"
 import styles from "./AboutComp.module.scss"
-import { motion } from "framer-motion"
+import { motion, useScroll, useTransform } from "framer-motion"
 
 const AboutComp = () => {
+	const { scrollY } = useScroll()
+
+	const oppositeElement = useTransform(scrollY, [0, 5000], [0, -400])
+
+	const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+
+	useEffect(() => {
+		const centerX = window.innerWidth / 2
+		const centerY = window.innerHeight / 2
+
+		const handleMouseMove = (event: MouseEvent) => {
+			const relativeX = event.clientX - centerX
+			const relativeY = event.clientY - centerY
+
+			setMousePosition({
+				x: relativeX,
+				y: relativeY,
+			})
+		}
+
+		window.addEventListener("mousemove", handleMouseMove)
+
+		return () => {
+			window.removeEventListener("mousemove", handleMouseMove)
+		}
+	}, [])
+
 	return (
-		<section className={styles.about}>
+		<motion.section className={styles.about} style={{ y: oppositeElement }}>
 			<h2>Some Medieval</h2>
 
 			<motion.div
@@ -13,7 +41,7 @@ const AboutComp = () => {
 			>
 				Content appears on scroll
 			</motion.div>
-		</section>
+		</motion.section>
 	)
 }
 

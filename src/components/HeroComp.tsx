@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 
 import styles from "./HeroComp.module.scss"
 
-import { motion } from "framer-motion"
+import { motion, useScroll, useTransform } from "framer-motion"
 
 import bg from "../assets/bg.png"
 import lake from "../assets/02.png"
@@ -12,6 +12,23 @@ import nearMountainsRight from "../assets/03.png"
 import tree from "../assets/06.png"
 
 const HeroComp = () => {
+	const { scrollY } = useScroll()
+
+	// Fast movement - small input range
+	const fastElement = useTransform(scrollY, [0, 500], [0, 400])
+
+	// Medium movement - medium input range
+	const mediumElement = useTransform(scrollY, [0, 1000], [0, 400])
+
+	// Slow movement - large input range
+	const slowElement = useTransform(scrollY, [0, 2000], [0, 400])
+
+	// Super slow - very large input range
+	const superSlowElement = useTransform(scrollY, [0, 5000], [0, 400])
+
+	// Oposite elements
+	const oppositeElement = useTransform(scrollY, [0, 5000], [0, -400])
+
 	const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
 
 	useEffect(() => {
@@ -52,26 +69,30 @@ const HeroComp = () => {
 				transformStyle: "preserve-3d",
 			}}
 		>
-			<div
+			<motion.div
 				className={styles.moonLight}
 				style={{
 					transform: `translate3d(${mousePosition.x * 0.005}px, ${
 						mousePosition.y * 0.003
 					}px, 0px)`,
 					...springStyle,
+					y: superSlowElement,
+					zIndex: 0,
 				}}
-			></div>
-			<div
+			></motion.div>
+			<motion.div
 				className={styles.moon}
 				style={{
 					transform: `translate3d(${mousePosition.x * 0.005}px, ${
-						mousePosition.y * 0.005
+						mousePosition.y * 0.003
 					}px, 0px)`,
 					...springStyle,
+					y: superSlowElement,
+					zIndex: 0,
 				}}
-			></div>
+			></motion.div>
 
-			<img
+			<motion.img
 				className={styles.bg}
 				src={bg}
 				alt="background"
@@ -79,6 +100,7 @@ const HeroComp = () => {
 					transform: `translate3d(${mousePosition.x * 0.01}px, ${
 						mousePosition.y * 0.01
 					}px, 0px)`,
+					y: oppositeElement,
 					...springStyle,
 				}}
 			/>
@@ -90,7 +112,7 @@ const HeroComp = () => {
 				className={styles.title}
 				style={{
 					transform: `translate3d(${mousePosition.x * 0.015}px, ${
-						mousePosition.y * 0.01
+						mousePosition.y * 0.5
 					}px, 0px)`,
 					...springStyle,
 				}}
@@ -109,7 +131,7 @@ const HeroComp = () => {
 				Exploring Japan’s regional medieval heritage through blades, battles,
 				and craftsmanship.
 			</p>
-			<img
+			<motion.img
 				className={styles.lake}
 				src={lake}
 				alt="lake"
@@ -117,20 +139,11 @@ const HeroComp = () => {
 					transform: `translate3d(${mousePosition.x * 0.03}px, ${
 						mousePosition.y * 0.03
 					}px, 0px)`,
+					y: oppositeElement,
 					...springStyle,
 				}}
 			/>
-			<img
-				className={styles.house}
-				src={house}
-				alt="islands"
-				style={{
-					transform: `translate3d(${mousePosition.x * 0.03}px, ${
-						mousePosition.y * 0.03
-					}px, 0px)`,
-					...springStyle,
-				}}
-			/>
+			<img className={styles.house} src={house} alt="house" />
 			<motion.img
 				initial={{ opacity: 0, x: -100 }}
 				whileInView={{ opacity: 1, x: 0 }}
@@ -167,7 +180,7 @@ const HeroComp = () => {
 				src={nearMountainsRight}
 				alt="right mountain"
 			/>
-			<img
+			<motion.img
 				className={`${styles.tree} swing-class`}
 				src={tree}
 				alt="near tree"
@@ -175,6 +188,7 @@ const HeroComp = () => {
 					transform: `translate3d(${mousePosition.x * 0.1}px, ${
 						mousePosition.y * 0.1
 					}px, 0px)`,
+					y: mediumElement,
 					...strongSpringStyle,
 				}}
 			/>
