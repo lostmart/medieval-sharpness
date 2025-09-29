@@ -33,7 +33,7 @@ const AboutComp = () => {
 	}, [])
 
 	return (
-		<motion.section className={styles.about} style={{ y: oppositeElement }}>
+		<section className={styles.about}>
 			<h2>Some Medieval</h2>
 
 			<img src={divider} alt="union" className={styles.divider} />
@@ -44,7 +44,7 @@ const AboutComp = () => {
 			>
 				Content appears on scroll
 			</motion.div>
-		</motion.section>
+		</section>
 	)
 }
 

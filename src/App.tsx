@@ -5,7 +5,7 @@ const App = () => {
 	return (
 		<main>
 			<HeroComp />
-			<AboutComp />
+			
 		</main>
 	)
 }
