@@ -2,9 +2,11 @@
 @use "../sass/mixins" as *;
 
 .about {
-	background-color: $tertiary-color;
+	background-color: $tertiary-color-alt;
 	min-height: 50dvh;
-	padding-top: 1em;
+	padding-top: 2em;
+	position: relative;
+	margin-top: 1em;
 
 	h2 {
 		text-align: center;
@@ -13,5 +15,12 @@
 		max-width: 356px;
 		margin: auto;
 		line-height: 1;
+	}
+
+	.divider {
+		position: absolute;
+		inset: 0;
+		width: 110%;
+		top: -10%;
 	}
 }

@@ -2,6 +2,8 @@ import { useEffect, useState } from "react"
 import styles from "./AboutComp.module.scss"
 import { motion, useScroll, useTransform } from "framer-motion"
 
+import divider from "../assets/Union.png"
+
 const AboutComp = () => {
 	const { scrollY } = useScroll()
 
@@ -34,6 +36,7 @@ const AboutComp = () => {
 		<motion.section className={styles.about} style={{ y: oppositeElement }}>
 			<h2>Some Medieval</h2>
 
+			<img src={divider} alt="union" className={styles.divider} />
 			<motion.div
 				initial={{ opacity: 0, y: 50 }}
 				whileInView={{ opacity: 1, y: 0 }}
