@@ -4,6 +4,7 @@ import { useEffect, useState } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
 
 import bg from "../assets/bg.png"
+
 import lake from "../assets/02.png"
 import house from "../assets/04.png"
 import nearMountainsLeft from "../assets/05.png"
@@ -65,6 +66,11 @@ const HeroComp = () => {
 		<section className={styles.scene}>
 			<div className={styles.moonLight}></div>
 			<div className={styles.moon}></div>
+			<img src={bg} className={styles.bg} alt="background mountains" />
+			<img src={lake} className={styles.lake} alt="lake of the maountain" />
+			<img src={house} className={styles.house} alt="house on the lake" />
+			<h1 className={styles.title}>Medieval Sharpness</h1>
+			<img src={tree} className={styles.tree} alt="japanese tyee" />
 		</section>
 	)
 }

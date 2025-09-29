@@ -34,11 +34,10 @@
 	.bg {
 		position: fixed;
 		z-index: 0;
-		width: 105%;
-		bottom: calc(1px + 18dvw);
+		width: 110%;
+		bottom: calc(1px + 40dvh);
 		left: -3%;
-		transform-style: preserve-3d;
-		filter: blur(1px);
+		// filter: blur(1px);
 
 		@include mobile-small {
 			bottom: calc(1px + 18dvw);
@@ -62,14 +61,13 @@
 	.title {
 		position: fixed;
 		z-index: 10;
-		top: calc(42% - 60px);
-		right: 0.5em;
+		top: calc(38dvh - 60px);
+		right: 2%;
 		text-align: end;
 		transform-style: preserve-3d;
 		text-shadow: 1px 1px 1px #000;
 		font-size: 56px;
 		line-height: 1;
-		opacity: 0;
 
 		@include mobile-large-plus {
 			top: calc(44% - 60px);
@@ -168,11 +166,10 @@
 	}
 
 	.lake {
-		position: absolute;
+		position: fixed;
 		width: 110%;
-		bottom: calc(1px - 10dvw);
-		transform-style: preserve-3d;
-		left: -2%;
+		bottom: calc(-130px + 40dvh);
+		left: 0;
 		right: 0;
 
 		@include mobile-small {
@@ -196,11 +193,10 @@
 	}
 
 	.house {
-		position: absolute;
-		bottom: calc(10% - 60px);
-		left: -28%;
-		z-index: 1;
-		transform-style: preserve-3d;
+		position: fixed;
+		bottom: calc(42dvh - 60px);
+		left: -18%;
+		z-index: 0;
 		max-width: 280px;
 
 		@include mobile-small {
@@ -266,12 +262,12 @@
 	}
 
 	.tree {
-		position: absolute;
-		top: calc(10% - 110px);
+		position: fixed;
+		top: calc(10% - 119px);
 		z-index: 1;
-		left: calc(0px - 23%);
+		left: calc(0px - 20%);
 		transform-style: preserve-3d;
-		filter: blur(3px);
+		filter: blur(2px);
 		transform-origin: left bottom;
 
 		@include mobile-small {
