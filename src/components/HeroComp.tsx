@@ -10,9 +10,12 @@ import house from "../assets/04.png"
 import nearMountainsLeft from "../assets/05.png"
 import nearMountainsRight from "../assets/03.png"
 import tree from "../assets/06.png"
+import upCloseTrees from "../assets/treees.png"
 
 const HeroComp = () => {
 	const { scrollY } = useScroll()
+
+	console.log(scrollY.get())
 
 	// Fast movement - small input range
 	const fastElement = useTransform(scrollY, [0, 500], [0, 400])
@@ -65,13 +68,42 @@ const HeroComp = () => {
 	return (
 		<section className={styles.scene}>
 			<div className={styles.moonLight}></div>
-			<div className={styles.moon}></div>
+
+			<motion.div
+				style={{ y: superSlowElement }}
+				className={styles.moon}
+			></motion.div>
+
 			<img src={bg} className={styles.bg} alt="background mountains" />
 			<img src={lake} className={styles.lake} alt="lake of the maountain" />
 			<img src={house} className={styles.house} alt="house on the lake" />
-			<h1 className={styles.title}>Medieval Sharpness</h1>
+
+			<motion.h1
+				initial={{ opacity: 0, y: -90 }}
+				whileInView={{ opacity: 1, y: 0 }}
+				transition={{ duration: 1.1, delay: 0.5 }}
+				className={styles.title}
+			>
+				Medieval Sharpness
+			</motion.h1>
+
 			<img src={tree} className={styles.tree} alt="japanese tyee" />
-			<img src={nearMountainsLeft} className={styles.nearMountainsLeft} alt="left mountains" />
+			<img
+				src={nearMountainsLeft}
+				className={styles.nearMountainsLeft}
+				alt="left mountains"
+			/>
+			<img
+				src={nearMountainsRight}
+				className={styles.nearMountainsRight}
+				alt="right mountain"
+			/>
+
+			<img
+				src={upCloseTrees}
+				className={styles.upCloseTrees}
+				alt="up close trees"
+			/>
 		</section>
 	)
 }

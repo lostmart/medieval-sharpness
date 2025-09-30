@@ -35,7 +35,7 @@
 		position: fixed;
 		z-index: 0;
 		width: 110%;
-		bottom: calc(1px + 40dvh);
+		bottom: calc(1px + 16dvh);
 		left: -3%;
 		// filter: blur(1px);
 
@@ -60,8 +60,8 @@
 
 	.title {
 		position: fixed;
-		z-index: 10;
-		top: calc(38dvh - 60px);
+		z-index: 3;
+		top: calc(40dvh - 60px);
 		right: 2%;
 		text-align: end;
 		transform-style: preserve-3d;
@@ -168,7 +168,7 @@
 	.lake {
 		position: fixed;
 		width: 110%;
-		bottom: calc(-130px + 40dvh);
+		bottom: calc(-130px + 20dvh);
 		left: 0;
 		right: 0;
 
@@ -194,7 +194,7 @@
 
 	.house {
 		position: fixed;
-		bottom: calc(42dvh - 60px);
+		bottom: calc(17dvh - 60px);
 		left: -18%;
 		z-index: 0;
 		max-width: 280px;
@@ -225,12 +225,13 @@
 	}
 
 	.nearMountainsLeft {
-		position: absolute;
+		position: fixed;
 		bottom: calc(1px - 10%);
 		left: calc(1px - 5%);
 		z-index: 1;
 		transform-style: preserve-3d;
 		filter: blur(2px);
+		width: 30%;
 
 		// @include mobile-small {
 		// 	bottom: calc(1px - 10%);
@@ -247,13 +248,13 @@
 	}
 
 	.nearMountainsRight {
-		position: absolute;
+		position: fixed;
 		bottom: calc(1px - 10%);
 		right: calc(1px - 5%);
 		z-index: 1;
 		transform-style: preserve-3d;
 		filter: blur(2px);
-		width: 110px;
+		width: 100px;
 
 		// @include mobile-medium {
 		// 	right: calc(10px - 1%);
@@ -287,5 +288,16 @@
 		// 	left: calc(0% - 130px);
 		// 	max-width: 1050px;
 		// }
+	}
+
+	.upCloseTrees {
+		position: fixed;
+		bottom: calc(1px - 14%);
+		z-index: 1;
+		left: calc(1px - 5%);
+		transform-style: preserve-3d;
+		filter: blur(2px);
+		width: 110%;
+		min-width: 640px;
 	}
 }

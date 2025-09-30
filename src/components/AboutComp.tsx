@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react"
 import styles from "./AboutComp.module.scss"
 import { motion, useScroll, useTransform } from "framer-motion"
-
-import divider from "../assets/Union.png"
+import woman from "../assets/woman.png"
 
 const AboutComp = () => {
 	const { scrollY } = useScroll()
@@ -35,15 +34,17 @@ const AboutComp = () => {
 	return (
 		<section className={styles.about}>
 			<h2>Some Medieval</h2>
+			<img src={woman} className={styles.woman} alt="japanese woman" />
 
-			<img src={divider} alt="union" className={styles.divider} />
-			<motion.div
+			<div className={styles.redDot}></div>
+
+			{/* <motion.div
 				initial={{ opacity: 0, y: 50 }}
 				whileInView={{ opacity: 1, y: 0 }}
 				transition={{ duration: 0.5 }}
 			>
 				Content appears on scroll
-			</motion.div>
+			</motion.div> */}
 		</section>
 	)
 }
