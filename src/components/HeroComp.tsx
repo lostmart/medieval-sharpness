@@ -71,6 +71,7 @@ const HeroComp = () => {
 			<img src={house} className={styles.house} alt="house on the lake" />
 			<h1 className={styles.title}>Medieval Sharpness</h1>
 			<img src={tree} className={styles.tree} alt="japanese tyee" />
+			<img src={nearMountainsLeft} className={styles.nearMountainsLeft} alt="left mountains" />
 		</section>
 	)
 }

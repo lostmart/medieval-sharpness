@@ -39,23 +39,23 @@
 		left: -3%;
 		// filter: blur(1px);
 
-		@include mobile-small {
-			bottom: calc(1px + 18dvw);
-		}
+		// @include mobile-small {
+		// 	bottom: calc(1px + 18dvw);
+		// }
 
-		@include mobile-medium {
-			bottom: calc(1px + 18dvw);
-		}
+		// @include mobile-medium {
+		// 	bottom: calc(1px + 18dvw);
+		// }
 
-		@include mobile-large {
-			bottom: calc(1px + 18dvw);
-			left: -1%;
-			width: 110%;
-		}
+		// @include mobile-large {
+		// 	bottom: calc(1px + 18dvw);
+		// 	left: -1%;
+		// 	width: 110%;
+		// }
 
-		@include mobile-large-plus {
-			bottom: calc(1px + 18dvw);
-		}
+		// @include mobile-large-plus {
+		// 	bottom: calc(1px + 18dvw);
+		// }
 	}
 
 	.title {
@@ -69,13 +69,13 @@
 		font-size: 56px;
 		line-height: 1;
 
-		@include mobile-large-plus {
-			top: calc(44% - 60px);
-			right: 0;
-			font-size: 62px;
-			background-color: #0000001c;
-			backdrop-filter: blur(5px);
-		}
+		// @include mobile-large-plus {
+		// 	top: calc(44% - 60px);
+		// 	right: 0;
+		// 	font-size: 62px;
+		// 	background-color: #0000001c;
+		// 	backdrop-filter: blur(5px);
+		// }
 	}
 
 	.lead {
@@ -91,21 +91,21 @@
 		margin: auto;
 		width: 100%;
 
-		@include mobile-medium {
-			top: calc(52% - 60px);
-			left: 11%;
-			max-width: 620px;
-		}
+		// @include mobile-medium {
+		// 	top: calc(52% - 60px);
+		// 	left: 11%;
+		// 	max-width: 620px;
+		// }
 
-		@include mobile-large-plus {
-			right: 0;
-			top: calc(53% - 60px);
-			left: unset;
-			text-align: end;
-			background-color: #0000001c;
-			backdrop-filter: blur(5px);
-			width: fit-content;
-		}
+		// @include mobile-large-plus {
+		// 	right: 0;
+		// 	top: calc(53% - 60px);
+		// 	left: unset;
+		// 	text-align: end;
+		// 	background-color: #0000001c;
+		// 	backdrop-filter: blur(5px);
+		// 	width: fit-content;
+		// }
 	}
 
 	.moon {
@@ -119,21 +119,21 @@
 		z-index: 0;
 		filter: blur(1px);
 
-		@include mobile-small {
-			right: 7%;
-		}
+		// @include mobile-small {
+		// 	right: 7%;
+		// }
 
-		@include mobile-medium {
-			top: 20%;
-			right: 10%;
-		}
+		// @include mobile-medium {
+		// 	top: 20%;
+		// 	right: 10%;
+		// }
 
-		@include mobile-large {
-			width: max(120px, 12vw);
-			height: max(120px, 12vw);
-			top: 15%;
-			right: 10%;
-		}
+		// @include mobile-large {
+		// 	width: max(120px, 12vw);
+		// 	height: max(120px, 12vw);
+		// 	top: 15%;
+		// 	right: 10%;
+		// }
 	}
 
 	.moonLight {
@@ -148,21 +148,21 @@
 		transform-style: preserve-3d;
 		filter: blur(42px);
 
-		@include mobile-small {
-			top: 6%;
-			right: -2%;
-		}
-		@include mobile-medium {
-			top: 12%;
-			right: 3%;
-		}
+		// @include mobile-small {
+		// 	top: 6%;
+		// 	right: -2%;
+		// }
+		// @include mobile-medium {
+		// 	top: 12%;
+		// 	right: 3%;
+		// }
 
-		@include mobile-large {
-			width: max(240px, 12vw);
-			height: max(240px, 12vw);
-			top: 5%;
-			right: 5%;
-		}
+		// @include mobile-large {
+		// 	width: max(240px, 12vw);
+		// 	height: max(240px, 12vw);
+		// 	top: 5%;
+		// 	right: 5%;
+		// }
 	}
 
 	.lake {
@@ -172,24 +172,24 @@
 		left: 0;
 		right: 0;
 
-		@include mobile-small {
-			bottom: calc(1px - 10dvw);
-		}
+		// @include mobile-small {
+		// 	bottom: calc(1px - 10dvw);
+		// }
 
-		@include mobile-medium {
-			bottom: calc(1px - 10dvw);
-			left: -2%;
-		}
+		// @include mobile-medium {
+		// 	bottom: calc(1px - 10dvw);
+		// 	left: -2%;
+		// }
 
-		@include mobile-large {
-			bottom: calc(1px - 10dvw);
-			left: -2%;
-		}
+		// @include mobile-large {
+		// 	bottom: calc(1px - 10dvw);
+		// 	left: -2%;
+		// }
 
-		@include mobile-large-plus {
-			bottom: calc(1px - 10dvw);
-			left: -4%;
-		}
+		// @include mobile-large-plus {
+		// 	bottom: calc(1px - 10dvw);
+		// 	left: -4%;
+		// }
 	}
 
 	.house {
@@ -199,29 +199,29 @@
 		z-index: 0;
 		max-width: 280px;
 
-		@include mobile-small {
-			left: -10%;
-			bottom: calc(8% - 60px);
-			max-width: 320px;
-			width: 80%;
-		}
+		// @include mobile-small {
+		// 	left: -10%;
+		// 	bottom: calc(8% - 60px);
+		// 	max-width: 320px;
+		// 	width: 80%;
+		// }
 
-		@include mobile-medium {
-			bottom: calc(10% - 60px);
-			left: 5%;
-		}
+		// @include mobile-medium {
+		// 	bottom: calc(10% - 60px);
+		// 	left: 5%;
+		// }
 
-		@include mobile-large {
-			left: 5%;
-			max-width: 400px;
-		}
+		// @include mobile-large {
+		// 	left: 5%;
+		// 	max-width: 400px;
+		// }
 
-		@include mobile-large-plus {
-			left: 8dvw;
-			bottom: calc(15% - 60px);
-			width: 50%;
-			max-width: 520px;
-		}
+		// @include mobile-large-plus {
+		// 	left: 8dvw;
+		// 	bottom: calc(15% - 60px);
+		// 	width: 50%;
+		// 	max-width: 520px;
+		// }
 	}
 
 	.nearMountainsLeft {
@@ -236,14 +236,14 @@
 		// 	bottom: calc(1px - 10%);
 		// }
 
-		@include mobile-medium {
-			bottom: calc(1px - 10%);
-		}
+		// @include mobile-medium {
+		// 	bottom: calc(1px - 10%);
+		// }
 
-		@include mobile-large {
-			bottom: calc(1px - 10%);
-			width: 20%;
-		}
+		// @include mobile-large {
+		// 	bottom: calc(1px - 10%);
+		// 	width: 20%;
+		// }
 	}
 
 	.nearMountainsRight {
@@ -255,10 +255,10 @@
 		filter: blur(2px);
 		width: 110px;
 
-		@include mobile-medium {
-			right: calc(10px - 1%);
-			width: 15%;
-		}
+		// @include mobile-medium {
+		// 	right: calc(10px - 1%);
+		// 	width: 15%;
+		// }
 	}
 
 	.tree {
@@ -270,22 +270,22 @@
 		filter: blur(2px);
 		transform-origin: left bottom;
 
-		@include mobile-small {
-			top: calc(2% - 90px);
-		}
+		// @include mobile-small {
+		// 	top: calc(2% - 90px);
+		// }
 
-		@include mobile-medium {
-			left: calc(0px - 14%);
-			width: 114%;
-		}
+		// @include mobile-medium {
+		// 	left: calc(0px - 14%);
+		// 	width: 114%;
+		// }
 
-		@include mobile-large {
-			left: calc(0% - 90px);
-		}
+		// @include mobile-large {
+		// 	left: calc(0% - 90px);
+		// }
 
-		@include mobile-large-plus {
-			left: calc(0% - 130px);
-			max-width: 1050px;
-		}
+		// @include mobile-large-plus {
+		// 	left: calc(0% - 130px);
+		// 	max-width: 1050px;
+		// }
 	}
 }
