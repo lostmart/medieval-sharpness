@@ -60,7 +60,7 @@
 
 	.title {
 		position: fixed;
-		z-index: 3;
+		z-index: 2;
 		top: calc(40dvh - 60px);
 		right: 2%;
 		text-align: end;
@@ -292,8 +292,8 @@
 
 	.upCloseTrees {
 		position: fixed;
-		bottom: calc(1px - 14%);
-		z-index: 1;
+		bottom: calc(1px - 5dvh);
+		z-index: 4;
 		left: calc(1px - 5%);
 		transform-style: preserve-3d;
 		filter: blur(2px);

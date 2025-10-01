@@ -18,16 +18,31 @@ const HeroComp = () => {
 	console.log(scrollY.get())
 
 	// Fast movement - small input range
-	const fastElement = useTransform(scrollY, [0, 500], [0, 400])
+	// const fastElement = useTransform(scrollY, [0, 500], [0, 400])
 
-	// Medium movement - medium input range
-	const mediumElement = useTransform(scrollY, [0, 1000], [0, 400])
+	// // Medium movement - medium input range
+	// const mediumElement = useTransform(scrollY, [0, 1000], [0, 400])
 
 	// Super slow - very large input range
-	const superSlowElement = useTransform(scrollY, [0, 5000], [0, -100])
+	const superSlowElement = useTransform(scrollY, [0, 5000], [0, -200])
 
 	// Slow - very large input range
-	const slowElement = useTransform(scrollY, [0, 5000], [0, -300])
+	const slowElement = useTransform(scrollY, [0, 5000], [0, -1500])
+
+	// faster - very large input range
+	const fasterElement = useTransform(scrollY, [0, 5000], [0, -1600])
+
+	// even faster - very large input range
+	const evenFasterElement = useTransform(scrollY, [0, 5000], [0, -1900])
+
+	// title - very large input range
+	const titleElement = useTransform(scrollY, [0, 5000], [0, -2300])
+
+	// front - very large input range
+	const frontElement = useTransform(scrollY, [0, 4000], [0, -3100])
+
+	// front - very large input range
+	const fronterElement = useTransform(scrollY, [0, 3500], [0, -3400])
 
 	const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
 
@@ -81,10 +96,22 @@ const HeroComp = () => {
 				alt="background mountains"
 			/>
 
-			<img src={lake} className={styles.lake} alt="lake of the maountain" />
-			<img src={house} className={styles.house} alt="house on the lake" />
+			<motion.img
+				style={{ y: fasterElement }}
+				src={lake}
+				className={styles.lake}
+				alt="lake of the maountain"
+			/>
+
+			<motion.img
+				style={{ y: evenFasterElement }}
+				src={house}
+				className={styles.house}
+				alt="house on the lake"
+			/>
 
 			<motion.h1
+				style={{ y: titleElement }}
 				initial={{ opacity: 0, y: -90 }}
 				whileInView={{ opacity: 1, y: 0 }}
 				transition={{ duration: 1.1, delay: 0.5 }}
@@ -93,19 +120,22 @@ const HeroComp = () => {
 				Medieval Sharpness
 			</motion.h1>
 
-			<img src={tree} className={styles.tree} alt="japanese tyee" />
-			<img
+			<img src={tree} className={styles.tree} alt="japanese tree" />
+			<motion.img
+				style={{ y: frontElement }}
 				src={nearMountainsLeft}
 				className={styles.nearMountainsLeft}
 				alt="left mountains"
 			/>
-			<img
+			<motion.img
+				style={{ y: frontElement }}
 				src={nearMountainsRight}
 				className={styles.nearMountainsRight}
 				alt="right mountain"
 			/>
 
-			<img
+			<motion.img
+				style={{ y: fronterElement }}
 				src={upCloseTrees}
 				className={styles.upCloseTrees}
 				alt="up close trees"
