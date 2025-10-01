@@ -23,14 +23,11 @@ const HeroComp = () => {
 	// Medium movement - medium input range
 	const mediumElement = useTransform(scrollY, [0, 1000], [0, 400])
 
-	// Slow movement - large input range
-	const slowElement = useTransform(scrollY, [0, 2000], [0, 400])
-
 	// Super slow - very large input range
 	const superSlowElement = useTransform(scrollY, [0, 5000], [0, -100])
 
-	// Oposite elements
-	const oppositeElement = useTransform(scrollY, [0, 5000], [0, -400])
+	// Slow - very large input range
+	const slowElement = useTransform(scrollY, [0, 5000], [0, -300])
 
 	const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
 
@@ -67,14 +64,23 @@ const HeroComp = () => {
 
 	return (
 		<section className={styles.scene}>
-			<div className={styles.moonLight}></div>
+			<motion.div
+				style={{ y: superSlowElement }}
+				className={styles.moonLight}
+			></motion.div>
 
 			<motion.div
 				style={{ y: superSlowElement }}
 				className={styles.moon}
 			></motion.div>
 
-			<img src={bg} className={styles.bg} alt="background mountains" />
+			<motion.img
+				style={{ y: slowElement }}
+				src={bg}
+				className={styles.bg}
+				alt="background mountains"
+			/>
+
 			<img src={lake} className={styles.lake} alt="lake of the maountain" />
 			<img src={house} className={styles.house} alt="house on the lake" />
 
