@@ -1,0 +1,54 @@
+.contact {
+	padding: 2em 0;
+	background-color: #0c1a39;
+	position: relative;
+	z-index: 5;
+
+	form {
+		h2 {
+			font-size: 47px;
+		}
+		background-color: white;
+		color: #0c1a39;
+	}
+
+	.contact-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		padding: 1em;
+
+		input {
+			width: 100%;
+			padding: 1em;
+			margin: 1em 0;
+			border-top: transparent;
+			border-left: transparent;
+			border-right: transparent;
+			background-color: transparent;
+		}
+
+		textarea {
+			width: 100%;
+			padding: 1em;
+			margin: 1em 0;
+			border-top: transparent;
+			border-left: transparent;
+			border-right: transparent;
+			background-color: transparent;
+		}
+
+		button {
+			width: 100%;
+			padding: 1em;
+			margin: 1em 0;
+			border-top: transparent;
+			border-left: transparent;
+			border-right: transparent;
+			background-color: #0c1a39;
+			color: white;
+		}
+	}
+}

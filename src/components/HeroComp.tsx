@@ -1,6 +1,6 @@
 import styles from "./HeroComp.module.scss"
 
-import { useEffect, useState } from "react"
+// import { useEffect, useState } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
 
 import bg from "../assets/bg.png"
@@ -24,27 +24,27 @@ const HeroComp = () => {
 	// const mediumElement = useTransform(scrollY, [0, 1000], [0, 400])
 
 	// Super slow - very large input range
-	const superSlowElement = useTransform(scrollY, [0, 5000], [0, -200])
+	const superSlowElement = useTransform(scrollY, [0, 5000], [0, -300])
 
 	// Slow - very large input range
-	const slowElement = useTransform(scrollY, [0, 5000], [0, -1500])
+	const slowElement = useTransform(scrollY, [0, 5000], [0, -1900])
 
 	// faster - very large input range
-	const fasterElement = useTransform(scrollY, [0, 5000], [0, -1600])
+	const fasterElement = useTransform(scrollY, [0, 5000], [0, -2100])
 
 	// even faster - very large input range
-	const evenFasterElement = useTransform(scrollY, [0, 5000], [0, -1900])
+	const evenFasterElement = useTransform(scrollY, [0, 5000], [0, -2300])
 
 	// title - very large input range
-	const titleElement = useTransform(scrollY, [0, 5000], [0, -2300])
+	const titleElement = useTransform(scrollY, [0, 5000], [0, -2800])
 
 	// front - very large input range
-	const frontElement = useTransform(scrollY, [0, 4000], [0, -3100])
+	const frontElement = useTransform(scrollY, [0, 4000], [0, -3300])
 
 	// front - very large input range
-	const fronterElement = useTransform(scrollY, [0, 3500], [0, -3400])
+	const fronterElement = useTransform(scrollY, [0, 3500], [0, -3500])
 
-	const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+	// const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
 
 	// useEffect(() => {
 	// 	const centerX = window.innerWidth / 2
@@ -67,15 +67,15 @@ const HeroComp = () => {
 	// 	}
 	// }, [])
 
-	const springStyle = {
-		transition: "transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)",
-		backfaceVisibility: "hidden" as const,
-	}
+	// const springStyle = {
+	// 	transition: "transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+	// 	backfaceVisibility: "hidden" as const,
+	// }
 
-	const strongSpringStyle = {
-		transition: "transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)",
-		backfaceVisibility: "hidden" as const,
-	}
+	// const strongSpringStyle = {
+	// 	transition: "transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)",
+	// 	backfaceVisibility: "hidden" as const,
+	// }
 
 	return (
 		<section className={styles.scene}>

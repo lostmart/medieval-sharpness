@@ -1,4 +1,5 @@
 import AboutComp from "./components/AboutComp"
+import ContactComp from "./components/ContactComp"
 import HeroComp from "./components/HeroComp"
 
 const App = () => {
@@ -6,6 +7,7 @@ const App = () => {
 		<main>
 			<HeroComp />
 			<AboutComp />
+			<ContactComp />
 		</main>
 	)
 }

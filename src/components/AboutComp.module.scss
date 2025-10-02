@@ -29,7 +29,7 @@
 		opacity: 0.45;
 		position: relative;
 		z-index: 1;
-		top: -37dvw;
+		transform: translateY(-24%);
 		position: relative;
 		width: 323px;
 	}
@@ -40,10 +40,10 @@
 		background-color: #ff0000;
 		border-radius: 50%;
 		position: absolute;
-		left: -6%;
+		left: 50%;
 		top: 28%;
 		z-index: 0;
 		opacity: 0.3;
-		transform: translate(5%, 0%);
+		transform: translate(-50%, 0%);
 	}
 }
