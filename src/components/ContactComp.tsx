@@ -1,6 +1,9 @@
 import { useState } from "react"
 import styles from "./ContactComp.module.scss"
 
+import { FaPhone } from "react-icons/fa6"
+import { MdAlternateEmail } from "react-icons/md"
+
 const ContactComp = () => {
 	type TFormData = {
 		name: string
@@ -27,7 +30,11 @@ const ContactComp = () => {
 		if (!formData.name || !formData.email || !formData.message) {
 			setError("Please fill out all fields")
 		}
-		
+
+		// check email format
+		if (!formData.email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+			setError("Please enter a valid email")
+		}
 
 		setTimeout(() => {
 			setError("")
@@ -54,7 +61,7 @@ const ContactComp = () => {
 						onChange={(e) =>
 							setFormData({ ...formData, email: e.target.value })
 						}
-						type="email"
+						type="text"
 						placeholder="Email"
 					/>
 					<textarea
@@ -72,6 +79,23 @@ const ContactComp = () => {
 					{error && <span>{error}</span>}
 				</div>
 			</form>
+
+			<article className={styles["contact-info"]}>
+				<h2>Contact Info</h2>
+
+				<ul>
+					<li>
+						<FaPhone /> +91 8009 054294
+					</li>
+					<li>
+						<MdAlternateEmail /> info@medieval.com
+					</li>
+				</ul>
+				<p>
+					1000+ Travel partners and 65+ Service city across India, USA, Canada &
+					UAE
+				</p>
+			</article>
 		</section>
 	)
 }

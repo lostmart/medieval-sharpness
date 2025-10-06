@@ -54,9 +54,42 @@
 			color: white;
 		}
 
-		span{
+		span {
 			color: rgb(156, 1, 1);
 			font-weight: bold;
+		}
+	}
+
+	.contact-info {
+		padding: 25px 20px;
+		position: relative;
+		
+		&::before {
+			content: "";
+			position: absolute;
+			width: 97px;
+			height: calc(100% + 32px);
+			top: 0;
+			right: 0;
+			background-color: #414068;
+			z-index: -1;
+		}
+
+		h2 {
+			color: white;
+			font-size: 47px;
+		}
+
+		ul,
+		li {
+			list-style: none;
+		}
+
+		li {
+			padding: 1em 0;
+			display: flex;
+			align-items: center;
+			gap: 0.5em;
 		}
 	}
 }
