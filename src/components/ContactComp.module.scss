@@ -29,6 +29,7 @@
 			border-left: transparent;
 			border-right: transparent;
 			background-color: transparent;
+			color: #0c1a39;
 		}
 
 		textarea {
@@ -39,6 +40,7 @@
 			border-left: transparent;
 			border-right: transparent;
 			background-color: transparent;
+			color: #0c1a39;
 		}
 
 		button {
@@ -50,6 +52,11 @@
 			border-right: transparent;
 			background-color: #0c1a39;
 			color: white;
+		}
+
+		span{
+			color: rgb(156, 1, 1);
+			font-weight: bold;
 		}
 	}
 }

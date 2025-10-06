@@ -43,20 +43,27 @@
 	animation-delay: 0.3s;
 }
 
-@keyframes fadeInUp {
-	0% {
-		opacity: 0;
-		transform: translateY(-10px);
-	}
-
-	100% {
-		opacity: 1;
-		transform: translateY(0);
-	}
+/* Horizontal Shake */
+.shake-horizontal {
+	animation: shake-horizontal 0.5s;
 }
 
-.fadeInUp {
-	animation: fadeInUp 1.8s ease-in-out;
-	animation-delay: 0.9s;
-	animation-fill-mode: forwards;
+@keyframes shake-horizontal {
+	0%,
+	100% {
+		transform: translateX(0);
+	}
+	10%,
+	30%,
+	50%,
+	70%,
+	90% {
+		transform: translateX(-7px);
+	}
+	20%,
+	40%,
+	60%,
+	80% {
+		transform: translateX(7px);
+	}
 }
