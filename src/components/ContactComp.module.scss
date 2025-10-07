@@ -1,8 +1,16 @@
+@use "../sass/variables" as *;
+@use "../sass/mixins" as *;
+
 .contact {
 	padding: 2em 0;
 	background-color: #0c1a39;
 	position: relative;
 	z-index: 5;
+
+	@include mobile-large {
+		display: flex;
+		gap: 1em;
+	}
 
 	form {
 		padding: 25px 20px;
@@ -63,7 +71,7 @@
 	.contact-info {
 		padding: 25px 20px;
 		position: relative;
-		
+
 		&::before {
 			content: "";
 			position: absolute;

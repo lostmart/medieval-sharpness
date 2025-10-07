@@ -37,21 +37,18 @@
 		width: 110%;
 		bottom: calc(1px + 16dvh);
 		left: -3%;
-		// filter: blur(1px);
 
-		// @include mobile-small {
-		// 	bottom: calc(1px + 18dvw);
-		// }
+		@include mobile-small {
+			bottom: calc(1px + 22dvh);
+		}
 
-		// @include mobile-medium {
-		// 	bottom: calc(1px + 18dvw);
-		// }
+		@include mobile-medium {
+			bottom: calc(1px + 28dvh);
+		}
 
-		// @include mobile-large {
-		// 	bottom: calc(1px + 18dvw);
-		// 	left: -1%;
-		// 	width: 110%;
-		// }
+		@include mobile-large {
+			bottom: calc(1px + 36dvh);
+		}
 
 		// @include mobile-large-plus {
 		// 	bottom: calc(1px + 18dvw);
@@ -69,13 +66,9 @@
 		font-size: 56px;
 		line-height: 1;
 
-		// @include mobile-large-plus {
-		// 	top: calc(44% - 60px);
-		// 	right: 0;
-		// 	font-size: 62px;
-		// 	background-color: #0000001c;
-		// 	backdrop-filter: blur(5px);
-		// }
+		@include mobile-small {
+			top: calc(44dvh - 60px);
+		}
 	}
 
 	.lead {
@@ -199,17 +192,16 @@
 		z-index: 0;
 		max-width: 280px;
 
-		// @include mobile-small {
-		// 	left: -10%;
-		// 	bottom: calc(8% - 60px);
-		// 	max-width: 320px;
-		// 	width: 80%;
-		// }
+		@include mobile-small {
+			bottom: calc(17dvh - 60px);
+			max-width: unset;
+			width: 40%;
+		}
 
-		// @include mobile-medium {
-		// 	bottom: calc(10% - 60px);
-		// 	left: 5%;
-		// }
+		@include mobile-medium {
+			bottom: calc(30dvh - 60px);
+			left: 8%;
+		}
 
 		// @include mobile-large {
 		// 	left: 5%;
@@ -299,5 +291,9 @@
 		filter: blur(2px);
 		width: 110%;
 		min-width: 640px;
+
+		@include mobile-medium {
+			bottom: calc(1px - 12dvh);
+		}
 	}
 }
